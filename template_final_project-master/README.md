@@ -1,3 +1,21 @@
+#Team Name: 
+Dunking Ducks
+
+#Team Members: 
+1. Kevin Cai
+2. Denis Khrapko
+
+#Project Description:
+User must move his player 2-dimensionally in order to dodge asteroids. The asteroids will spawn in at random trajectories, speeds, and with increasing frequency. Randomly spawning power-ups can also be implemented to increase players speed or grant invincibility briefly. The player will earn 1 point for each second survived, and will play for a high score.
+
+#Program Design - Features:
+1. Start Menu
+2. Moveing Asteroids
+3. Moving character must avoid collisions with asteroids
+4. Power-ups that change player's state
+4. Game Over Screen
+5. Score Keeping
+
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
