@@ -1,6 +1,11 @@
 #Team Name: 
 Dunking Ducks
 
+#Project Name:
+Duck 'n' Dodge
+
+CS110 B1 Final Project  << Fall Semester, 2024 >>
+
 #Team Members: 
 1. Kevin Cai
 2. Denis Khrapko
@@ -16,23 +21,22 @@ User must move his player 2-dimensionally in order to dodge asteroids. The aster
 4. Game Over Screen
 5. Score Keeping
 
+### Classes
+<< You should have a list of each of your classes with a description >>
+
+# class Player
+- The Player class represents the player's character in the game, which can be moved in all four directions and drawn on the game screen
+
+# class Asteroid
+- The Asteroid class represents an asteroid in the game, which moves downward at a specified speed and can be drawn on the game screen
+
+# class Powerup
+- The PowerUp class represents a collectible item in the game that has a position on the screen and an associated effect. The class provides methods to update its position (moving downward) and to draw it on the game screen.
+
+# class Controller
+- The Controller class is responsible for managing the overall game logic, including handling user input, updating game objects, and rendering the game screen
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
-
-# << Project Title >>
-## CS110 B1 Final Project  << Semester, Year >>
-
-## Team Members
-
-<< List team member names >>
-
-***
-
-## Project Description
-
-<< Give an overview of your project >>
-
-***    
 
 ## GUI Design
 
@@ -43,20 +47,6 @@ User must move his player 2-dimensionally in order to dodge asteroids. The aster
 ### Final Design
 
 ![final gui](assets/finalgui.jpg)
-
-## Program Design
-
-### Features
-
-1. << Feature 1 >>
-2. << Feature 2 >>
-3. << Feature 3 >>
-4. << Feature 4 >>
-5. << Feature 5 >>
-
-### Classes
-
-- << You should have a list of each of your classes with a description >>
 
 ## ATP
 
