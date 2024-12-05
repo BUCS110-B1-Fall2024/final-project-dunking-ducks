@@ -50,8 +50,72 @@ User must move his player 2-dimensionally in order to dodge asteroids. The aster
 
 ## ATP
 
-| Step                 |Procedure             |Expected Results                   |
-|----------------------|:--------------------:|----------------------------------:|
-|  1                   | Run Counter Program  |GUI window appears with count = 0  |
-|  2                   | click count button   | display changes to count = 1      |
-etc...
+Acceptance Test Procedure List
+Program Name: Duck 'n' Dodge
+
+#Test Case 1: controller.py (Player Movement)
+Test Description: Ensure that the user (Duck) can move freely: left, right, up, and down.
+
+Test Steps:
+1. Start the program.
+2. Press the keyboard buttons "wasd" to move up, left, down, and right.
+3. Verify that the user (Duck) can move accordingly to each key button.
+4. Repeat each button until it satisfies the previous step conditions.
+
+Expected Outcome:
+The player's Duck should move move up, left, down, and right in response to the arrow key inputs.
+
+#Test Case 2: asteroid.py (Collision Detection) 
+Test Description: Confirm that collisions between the player's body (Duck) and randomly generated asteroids are detected correctly.
+
+Test Steps:
+1. Start the program.
+2. Move the user freely first, purposely avoiding the asteroids.
+3. Verify that the program doesn't stop while maintaining no contact with any asteroids.
+4. Purposely collide the user's body with an asteroid.
+5. Verify that collision is detected.
+6. If collision is in contact, then the program should stop.
+7. The "game over" screen would be displayed at the end.
+
+Expected Outcome:
+The asteroids will be the enemies of the game, trying to ruin the user's score. 
+
+#Test Case 3: Score Counting System
+Test Description: Ensure the game has a purpose for players to play and compete.
+
+Test Steps:
+1. Start the program.
+2. Observe the points at the top left of the screen.
+3. The longer the user avoids collision with any asteroids, the higher the points will increase by.
+4. Purposely collide with the asteroids.
+5. The program should stop, and the "game over" screen would display the total points earned.
+
+Expected Outcome:
+The points will gradually increase over time, and once the players lose all their lives, the game over screen will display the points they earned.
+
+#Test Case 4: Game Over Screen
+Test Description: Verify that the game ends with the points earned when the player loses all thier lives.
+
+Test Steps:
+1. Start the program.
+2. Purposely collide with the asteroids until the player loses all their lives.
+3. Verify that the game displays a "Game Over" message.
+4. As well as the total points earned, 
+
+Expected Outcome: 
+The game should display a "Game Over" message and total points earned when the player loses all their lives.
+
+#Test Case 5: powerup.py (Power-ups for Players)
+Test Description: Confirm that the powerups will assist the players on their gameplay and performance. 
+
+Test Steps:
+1. Start the program.
+2. Make sure the player avoids contacting with any asteroids.
+3. A power-up will eventually generate into the program.
+4. Player will have a choice to collide with the power-up (In this case, they collide with it)
+5. Player will become either faster or smaller based off the power-up they collided with.
+6. Verify that the collision between player and power-ups will have immediate and limited effects.
+
+Expected Outcome:
+Once the player touch the power-up, it will ultimately help them maintain more points by being smaller (harder to hit asteroids) or faster (fast to avoid asteroids). 
+
