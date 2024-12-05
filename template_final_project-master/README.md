@@ -42,7 +42,7 @@ User must move his player 2-dimensionally in order to dodge asteroids. The aster
 
 ### Initial Design
 
-![initial gui](assets/gui.jpg)
+![initial gui](assets/duckgui.jpg)
 
 ### Final Design
 
