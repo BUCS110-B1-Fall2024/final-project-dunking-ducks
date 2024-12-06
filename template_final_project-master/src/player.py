@@ -1,6 +1,7 @@
 import pygame
-
+import os
 class Player:
+
     def __init__(self, x, y):
         """
         Initializes the player with position and default speed.
@@ -11,9 +12,18 @@ class Player:
         """
         self.x = x
         self.y = y
-        self.speed = 5
-        self.image = None  # Placeholder for player image
-        self.rect = pygame.Rect(self.x, self.y, 50, 50)  # Placeholder rect for collisions
+        self.speed = 7
+        player_image_path = os.path.join("assets", "player.jpg")
+        self.image = pygame.image.load(player_image_path)
+        self.flipped = False
+        player_sizex = (150)
+        player_sizey = (150)
+        player_sizex1 = (100)
+        player_sizey2 = (100)
+        self.rect = pygame.Rect(self.x, self.y, player_sizex1, player_sizey2)  # Placeholder rect for collisions
+        self.image.get_size()
+        self.image = pygame.transform.scale(self.image, (player_sizex, player_sizey))
+    
 
     def move_left(self):
         """
@@ -22,15 +32,23 @@ class Player:
         return: None
         """
         self.x -= self.speed
-        self.rect.topleft = (self.x, self.y)
+        if not self.flipped:
+            self.image = pygame.transform.flip(self.image, True, False)
+            self.flipped = True
+        #self.rect.topleft = (self.x, self.y)
+
 
     def move_right(self):
+        
         """
         Moves the player right.
         args: None
         return: None
         """
         self.x += self.speed
+        if not self.flipped:
+            self.image = pygame.transform.flip(self.image, True, False)
+            self.flipped = True
         self.rect.topleft = (self.x, self.y)
 
     def move_up(self):
@@ -40,7 +58,10 @@ class Player:
         return: None
         """
         self.y -= self.speed
-        self.rect.topleft = (self.x, self.y)
+        if not self.flipped:
+            self.image = pygame.transform.flip(self.image, True, False)
+            self.flipped = True
+        #self.rect.topleft = (self.x, self.y)
 
     def move_down(self):
         """Moves the player down.
@@ -48,7 +69,11 @@ class Player:
         return: None
         """
         self.y += self.speed
-        self.rect.topleft = (self.x, self.y)
+        
+        if not self.flipped:
+            self.image = pygame.transform.flip(self.image, True, False)
+            self.flipped = True
+        #self.rect.topleft = (self.x, self.y)
 
     def draw(self, screen):
         """Draws the player on the screen.
@@ -56,4 +81,5 @@ class Player:
         - screen : pygame.Surface - the game window draw the power-up on
         return: None
         """
-        pygame.draw.rect(screen, ("yellow"), self.rect)
+        #pygame.draw.rect(screen, ("yellow"), self.rect)
+        screen.blit(self.image,(self.x, self.y))
