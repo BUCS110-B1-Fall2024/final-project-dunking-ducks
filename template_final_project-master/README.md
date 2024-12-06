@@ -1,8 +1,8 @@
 #Team Name: 
 Dunking Ducks
 
-#Project Name:
-Duck 'n' Dodge
+#Project Title:
+Duck N' Dodge
 
 CS110 B1 Final Project  << Fall Semester, 2024 >>
 
@@ -11,18 +11,17 @@ CS110 B1 Final Project  << Fall Semester, 2024 >>
 2. Denis Khrapko
 
 #Project Description:
-User must move his player 2-dimensionally in order to dodge asteroids. The asteroids will spawn in at random trajectories, speeds, and with increasing frequency. Randomly spawning power-ups can also be implemented to increase players speed or grant invincibility briefly. The player will earn 1 point for each second survived, and will play for a high score.
+The user must move his player 2-dimensionally to dodge asteroids. The asteroids will spawn at random trajectories and speeds and with increasing frequency. Randomly spawning power-ups can also be implemented to increase player's speed or grant invincibility briefly. The player will earn 1 point for each second survived, and will play for a high score.
 
 #Program Design - Features:
-1. Start Menu
-2. Moveing Asteroids
+1. Lives (Changeable)
+2. Moving Asteroids
 3. Moving character must avoid collisions with asteroids
-4. Power-ups that change player's state
+4. Power-ups that change the player's state
 4. Game Over Screen
 5. Score Keeping
 
 ### Classes
-<< You should have a list of each of your classes with a description >>
 
 # class Player
 - The Player class represents the player's character in the game, which can be moved in all four directions and drawn on the game screen
@@ -36,7 +35,6 @@ User must move his player 2-dimensionally in order to dodge asteroids. The aster
 # class Controller
 - The Controller class is responsible for managing the overall game logic, including handling user input, updating game objects, and rendering the game screen
 
-:warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
 ## GUI Design
 
@@ -50,7 +48,7 @@ User must move his player 2-dimensionally in order to dodge asteroids. The aster
 
 ## ATP
 
-Acceptance Test Procedure List
+### Acceptance Test Procedure List
 Program Name: Duck 'n' Dodge
 
 #Test Case 1: controller.py (Player Movement)
