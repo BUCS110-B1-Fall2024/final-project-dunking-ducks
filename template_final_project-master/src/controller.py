@@ -3,7 +3,8 @@ import random
 from src.player import Player
 from src.asteroid import Asteroid
 from src.powerup import Powerup
-
+from src.restart import Button
+    
 class Controller:
     def __init__(self):
         """
@@ -28,6 +29,14 @@ class Controller:
         self.asteroid_spawn_prob = 0.08
         self.powerup_spawn_prob = 0.0005
         self.game_over = False  # Flag to track if the game is over
+        self.restart_button = Button(
+            x=400, y=600, width=200, height=60,
+            text="Restart?",
+            font=pygame.font.SysFont(None, 42),
+            text_color="white",
+            button_color="blue",
+            hover_color="lightblue"
+        )
 
     def mainloop(self):
         """
@@ -145,8 +154,27 @@ class Controller:
             # Center the text on the screen
             self.screen.blit(game_over_text, (self.screen_width // 2 - game_over_text.get_width() // 2, self.screen_height // 3))
             self.screen.blit(score_text, (self.screen_width // 2 - score_text.get_width() // 2, self.screen_height // 2))
+            self.restart_button.draw(self.screen)
 
         pygame.display.flip()  # Update the screen with everything drawn
+    def handle_events(self):
+        """Handles user input and other events."""
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                self.running = False
+
+            if self.game_over and self.restart_button.is_clicked(event):
+                self.restart_game()
+
+    def restart_game(self):
+        """Resets the game state for a restart."""
+        self.player = Player(375, 275)
+        self.asteroids = []
+        self.powerup = []
+        self.lives = 3
+        self.score = 0
+        self.start_time = pygame.time.get_ticks()
+        self.game_over = False
 
     def player_death(self):
         """Handles player death by setting game_over to True."""
