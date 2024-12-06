@@ -73,7 +73,7 @@ class Controller:
         for asteroid in self.asteroids:
             asteroid.update_position()
 
-        self.powerup_spawn_prob = 0.001 + (self.score // 5000) * 0.02
+        self.powerup_spawn_prob = 0.001 + (self.score // 5000) * 0.005
 
         # Spawn powerups randomly based on the current probability
         if random.random() < self.powerup_spawn_prob:
