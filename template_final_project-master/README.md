@@ -46,7 +46,7 @@ User must move his player 2-dimensionally in order to dodge asteroids. The aster
 
 ### Final Design
 
-![final gui](assets/finalgui.jpg)
+![final gui](assets/finalgui.png)
 
 ## ATP
 
